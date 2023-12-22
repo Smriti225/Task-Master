@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}
+<title>Task Master</title>
+{% endblock  %}
+
+{% block body %}
+<div class="content">
+    <h1>Task Master</h1>
+    <div id="frm">
+        <form action="/" method="POST">
+            <input id="cnt" type="text" name="context"  placeholder="Add New task in list"required/>
+            <input id ="btn" type="submit" value="ADD TASK"/>
+        </form>
+    </div>
+    
+    <div class="table">
+        <table>
+            {% if tasks %}
+            <tr>
+                <th>Task</th>
+                <th>Added</th>
+                <th>Actions</th>
+            </tr>
+            
+            <h2>List of Task</h2>
+            {% endif %}
+            {% for task in tasks %}
+            <tr>
+                <td>{{task.content}}</td>
+                <td>{{task.date_created.date()}}</td>
+                <td>
+                    <a href="/update/{{task.id}}">Update</a><br>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+    
+</div>
+
+{% endblock %}

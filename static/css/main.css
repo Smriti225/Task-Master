@@ -1,0 +1,41 @@
+body{
+    margin:auto;
+    text-align:center;
+}
+.table{
+    margin:50px;
+}
+table {
+    padding: 10px;
+    margin:auto;
+    width:50%;
+    justify-content: center;
+    border-collapse: collapse;
+
+}
+#cnt{
+    padding:5px;
+    width:25%;
+    border: 2px solid black;
+}
+.content{
+    color :rgb(24, 23, 23);
+    padding:2px;
+    margin:110px;
+}
+th,td{
+    font-size: large;
+    border:2px solid black;
+    padding:5px;
+    font-weight: bold;
+}
+td a{
+    text-decoration: none;
+    color:black;
+    cursor: grab;
+}
+#btn{
+    padding:5px;
+    border:2px solid rgba(102, 93, 93, 0.658);
+    background-color:rgba(158, 156, 160, 0.603);
+}
